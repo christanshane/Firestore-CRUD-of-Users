@@ -36,4 +36,9 @@ export class UserService {
      this.userDoc.delete();
    }
 
+   updateUser(user: User){
+     this.userDoc = this.angularFirestore.doc(`users/${user.id}`);
+     this.userDoc.update(user);
+   }
+
 }
