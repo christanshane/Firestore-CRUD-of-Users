@@ -22,4 +22,8 @@ export class UsersComponent implements OnInit {
      });
   }
 
+  deleteUser(event, user){
+    this.userService.deleteUser(user);
+  }
+
 }
