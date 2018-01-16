@@ -38,8 +38,10 @@ export class UsersComponent implements OnInit {
   }
 
   updateUser(user: User){
-    this.userService.updateUser(user);
-    this.clearState();
+    if(user.name != '' && user.email != '' && user.password != ''){
+      this.userService.updateUser(user);
+      this.clearState();
+    }
   }
 
 }
